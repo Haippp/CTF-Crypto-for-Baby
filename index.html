@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        p{
+            margin: 0.7rem 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-950 flex items-center justify-center">
+    <div class="relative max-w-lg w-full rounded-2xl p-[2px] bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 shadow-[0_0_40px_rgba(139,92,246,0.6)]">
+        <div class="rounded-2xl bg-slate-900 p-6" style="color: white;">
+            <h2 id="title" class="text-3xl font-bold mb-5">Level 1: The Begining</h2>
+            <p id="description" class="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores porro dolore exercitationem, nam velit tempora.</p>
+            <p class="italic">Decodingkan ciphertext ini: </p>
+            <p id="ciphertext" class="font-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, aliquid?</p>
+            <input type="text" id="answer" placeholder="Jawaban anda" style="color: black;" class="bg-teal-100 mt-5 w-full p-3 border-2 border-cyan-500 border-solid rounded-lg"><br>
+            <button onclick="checkAnswer()" class="mt-5 w-full py-3 font-semibold bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 transition duration-300 rounded-lg shadow-lg shadow-purple-500/30 mb-3">Kirim</button>
+            <div id="alert" class="mt-3 hidden rounded-md px-4 py-2 text-sm"></div>
+            <p class="text-center">create by: <em><a href="https://www.instagram.com/haiper_alexander/" class="underline font-semibold">haiper_alexander</a></em></p>
+        </div>
+    </div>
+</body>
+<script src="game-logic.js"></script>
+</html>

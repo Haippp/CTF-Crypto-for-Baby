@@ -1,0 +1,32 @@
+{
+    "1": {
+    "title": "Level 1: The Begining",
+    "desc": "sistem bilangan basis dua yang hanya menggunakan dua simbol, yaitu 0 dan 1, yang merupakan bahasa dasar komputer untuk menyimpan dan memproses semua data (teks, gambar, suara, instruksi).",
+    "cipher": "01100010 01100101 01101100 01100001 01101010 01100001 01110010 00100000 01100010 01101001 01101110 01100101 01110010 00100000 01101001 01110100 01110101 00100000 01100001 01110011 01101001 01101011 01101011 00100001 00100001",
+    "correct": "324e5c91afd0aef916e0c396f59bc8a800cefeb00198094faaed916fa26a74e4"
+    },
+    "2": {
+    "title": "Level 2: Eight stars",
+    "desc": "Bilangan oktal adalah sistem bilangan berbasis delapan yang menggunakan delapan digit simbol, yaitu 0, 1, 2, 3, 4, 5, 6, dan 7, Sistem ini penting dalam komputasi karena mempermudah representasi bilangan biner (basis 2) menjadi lebih ringkas, dengan mengelompokkan tiga bit biner menjadi satu digit oktal, sering dipakai di sistem operasi seperti Unix/Linux untuk izin akses file.",
+    "cipher": "157 143 164 141 154 40 163 151 40 142 151 154 141 156 147 141 156 40 142 141 163 151 163 40 70 41",
+    "correct": "d590050238d80a2eb7e3ac776d69b954169f94d6ecf28ba54a0abdc22c87a286"
+    },
+    "3": {
+    "title": "Level 3: Made a Fourtune",
+    "desc": "Bilangan heksadesimal adalah sistem bilangan basis 16 yang menggunakan 16 simbol unik (0-9 dan A-F, di mana A=10, B=11, ..., F=15) untuk merepresentasikan nilai, sering digunakan dalam komputer karena ringkas dan mudah dikonversi ke biner (setiap 4 bit), sangat penting dalam pengkodean warna HTML (seperti FFFF00 untuk kuning) dan representasi memori komputer.",
+    "cipher": "74656d616e206b75206164616c6168206865787361205844",
+    "correct": "ad6dfd2a00ab636a9c9238eb0b6c1a6aae80a27fd57bd8f78b140da2dc5159d5"
+    },
+    "4": {
+    "title": "Level 4: Im the Bese",
+    "desc": "Base64 adalah metode pengkodean (encoding) yang mengubah data biner (seperti gambar, file, atau karakter non-ASCII) menjadi format string teks ASCII yang terdiri dari 64 karakter aman (A-Z, a-z, 0-9, +, /, dan = untuk padding). Tujuannya adalah untuk memungkinkan data biner ditransfer melalui media atau protokol yang hanya mendukung teks (seperti email via MIME atau URL), memastikan data tetap utuh tanpa rusak selama transmisi.",
+    "cipher": "QmFzZTY0PyBzZXBlcmlueWEgbWlyaXAgVVJMPw==",
+    "correct": "ae51f2af9914103911e0c3d9cb6d13d607ac3852d23299d0ba1a0212653ba331"
+    },
+    "5": {
+    "title": "Level 5: Mix Everything",
+    "desc": "Setelah semua dasar yang ada pelajari silahkan selesaikan tantangan sulit ini",
+    "cipher": "MzAzMTMxMzAzMTMxMzAzMTIwMzAzMTMwMzEzMTMwMzAzMDIwMzAzMTMxMzEzMDMwMzAzMDIwMzAzMTMwMzAzMDMwMzEzMTIwMzAzMTMwMzEzMDMxMzAzMDIwMzAzMTMwMzAzMDMxMzEzMDIwMzAzMTMxMzEzMTMwMzEzMTIwMzAzMTMwMzEzMTMwMzAzMTIwMzAzMDMxMzEzMDMwMzEzMTIwMzAzMDMxMzEzMDMxMzAzMDIwMzAzMTMxMzEzMTMwMzAzMTIwMzAzMTMxMzEzMTMwMzAzMTIwMzAzMTMwMzEzMTMxMzEzMTIwMzAzMDMxMzEzMDMxMzAzMDIwMzAzMTMxMzAzMTMwMzEzMTIwMzAzMTMxMzEzMDMxMzAzMTIwMzAzMTMwMzEzMTMxMzEzMTIwMzAzMTMxMzEzMDMwMzAzMDIwMzAzMDMxMzEzMDMxMzAzMDIwMzAzMTMxMzAzMTMwMzAzMDIwMzAzMDMxMzEzMDMxMzAzMDIwMzAzMTMxMzAzMTMxMzAzMTIwMzAzMTMwMzEzMTMxMzEzMTIwMzAzMDMxMzEzMDMwMzEzMTIwMzAzMTMxMzAzMTMxMzEzMDIwMzAzMTMxMzAzMDMwMzEzMTIwMzAzMDMxMzEzMDMwMzAzMDIwMzAzMTMxMzAzMDMxMzAzMDIwMzAzMDMxMzEzMDMwMzAzMTIwMzAzMTMxMzAzMTMxMzEzMDIwMzAzMDMxMzEzMTMwMzAzMTIwMzAzMDMxMzAzMDMwMzAzMTIwMzAzMTMxMzEzMTMxMzAzMQ==",
+    "correct": "fffa6ed05eb06a70e0bf01797470f12f60a0c40d4a2c0b189029f6da71a33a27"
+    }
+}

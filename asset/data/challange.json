@@ -1,0 +1,17 @@
+{
+    "1": {
+        "nama": "encoding-playground",
+        "kesulitan": "Mudah",
+        "deskripsi": "Tantangan ini berisi basic-basic encoding, yang memiliki 5 level untuk diselesaikan"
+    },
+    "2": {
+        "nama": "x0r-playground",
+        "kesulitan": "Sedang",
+        "deskripsi": ""
+    },
+    "3": {
+        "nama": "basis-militer",
+        "kesulitan": "Sulit",
+        "deskripsi": ""
+    }
+}

@@ -45,6 +45,7 @@ function showModal() {
 
 function closeModal() {
   document.getElementById('finishModal').classList.add('hidden')
+  window.location.assign('../')
 }
 
 function checkAnswer() {

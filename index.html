@@ -1,43 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level 1</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        p{
-            margin: 0.7rem 0;
-        }
-    </style>
-</head>
-<body class="min-h-screen bg-slate-950 flex items-center justify-center">
-    <div id="finishModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center hidden z-50">
-        <div class="bg-white rounded-xl p-6 max-w-sm w-full text-center shadow-2xl">
-            <h2 class="text-2xl font-bold text-green-600">
-            🎉 Selamat!
-            </h2>
-            <p class="mt-3 text-gray-600">
-            Anda telah menyelesaikan challenge ini.
-            </p>
-            <button onclick="closeModal()" class="mt-5 px-4 py-2 bg-green-600 text-white rounded-lg">
-            Tutup
-            </button>
+    <title>CTF Crypto For Baby</title>
+  </head>
+  <body class="flex items-center justify-center gap-3 bg-gradient-to-t from-emerald-700 via-gray-800 to-gray-950">
+    <div class="mt-10 p-10 w-md lg:w-5xl grid lg:grid-cols-3 grid-cols-2 gap-4" id="card">
+      <div class="py-5 lg:py-0 bg-white/10 border border-white/20 rounded-md items-center mt-5 lg:mt-0 backdrop-blur-md flex flex-col-reverse lg:flex-row justify-center col-span-2">
+        <div class="mt-5 lg:mt-0 px-8 pb-5 text-center lg:text-left">
+          <h1 class="lg:text-3xl text-xl text-yellow-200 font-black italic">
+            What's Up!
+          </h1>
+          <h4 class="lg:text-base text-sm text-white">My name is <span class="font-black">Haiper Alexander</span></h3>
+          <p class="mt-3 lg:text-sm  text-xs text-white text-justify lg:mr-[5rem]">Ini merupakan project ku, dimana aku pengen bikin tantangan kripto yang begginer friendly untuk membantu pemula mempelajari kriptografi.</p>
         </div>
+        <div class="w-60 border-b border-white lg:hidden"></div>
+        <img src="./asset/img/haip.png" class="w-[100px] sm:w-[150px] lg:w-[200px]">
+      </div>
+      <div class="bg-white/10 border border-white/20 rounded-md flex justify-center items-center relative col-span-2 lg:col-span-1">
+        <img src="./asset/img/message.png" class="w-[60px] lg:w-[80px] absolute top-20 right-0 lg:top-[11rem] lg:left-[16rem]">
+        <p class="text-white text-xs lg:text-base text-center p-5 lg:p-8 w-100% italic transition-opacity duration-700 opacity-100" id="qoute"></p>
+      </div>
+      <h1 class="col-span-2 lg:col-span-3 text-lg lg:text-2xl font-bold text-white">Challange : </h1>
     </div>
-    <div class="relative max-w-lg w-full rounded-2xl p-[2px] bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 shadow-[0_0_40px_rgba(139,92,246,0.6)]">
-        <div class="rounded-2xl bg-slate-900 p-6" style="color: white;">
-            <h2 id="title" class="text-3xl font-bold mb-5">Level 1: The Begining</h2>
-            <p id="description" class="text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores porro dolore exercitationem, nam velit tempora.</p>
-            <p class="italic">Decodingkan ciphertext ini: </p>
-            <p id="ciphertext" class="font-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, aliquid?</p>
-            <input type="text" id="answer" placeholder="Jawaban anda" style="color: black;" class="bg-teal-100 mt-5 w-full p-3 border-2 border-cyan-500 border-solid rounded-lg"><br>
-            <button onclick="checkAnswer()" class="mt-5 w-full py-3 font-semibold bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 transition duration-300 rounded-lg shadow-lg shadow-purple-500/30 mb-3">Kirim</button>
-            <div id="alert" class="mt-3 hidden rounded-md px-4 py-2 text-sm"></div>
-            <p class="text-center">create by: <em><a href="https://www.instagram.com/haiper_alexander/" class="underline font-semibold">haiper_alexander</a></em></p>
+  </body>
+  <script>
+    fetch('./asset/data/challange.json').then(
+      data => data.json()
+    ).then(data => {
+      const cards = document.getElementById('card')
+      for (let i = 1; i <= Object.keys(data).length; i++) {
+        card = ''
+        const challange = data[`${i}`];
+        card += `
+        <div class="bg-white/10 border-1 border-white/20 rounded-md text-white p-5">
+          <h1 class="text-lg lg:text-2xl font-black mb-2">
+            ${challange.nama}
+          </h1>
+        `
+        if(challange.kesulitan === 'Mudah') card += `<span class="inline-block px-3 py-1 text-xs lg:text-sm font-medium text-emerald-300 bg-emerald-500/10 rounded-md">${challange.kesulitan}</span>`
+        else if(challange.kesulitan === 'Sedang') card += `<span class="inline-block px-3 py-1 text-xs lg:text-sm font-medium text-yellow-300 bg-yellow-500/10 rounded-md">${challange.kesulitan}</span>`
+        else card += `<span class="inline-block px-3 py-1 text-xs lg:text-sm font-medium text-red-300 bg-red-500/10 rounded-md">${challange.kesulitan}</span>`
+        card += `
+          <p class="text-justify mt-4 text-xs lg:text-base">${challange.deskripsi}</p>
+          <a href="./${challange.nama}" class="mt-5 w-100% flex justify-center py-1 lg:py-3 mb-3 bg-emerald-950 rounded-lg text-sm lg:text-lg font-bold">mulai</a>
         </div>
-    </div>
-</body>
-<script src="game-logic.js"></script>
+        `
+        cards.innerHTML += card
+      }
+    })
+  </script>
+  <script src="./asset/script/qoute.js" defer></script>
 </html>

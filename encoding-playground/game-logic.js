@@ -3,6 +3,8 @@ const title = document.getElementById('title')
 const desc = document.getElementById('description')
 const ct = document.getElementById('ciphertext')
 const userInput = document.getElementById('answer')
+let oldLevel = level
+
 document.getElementById('answer').addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
       checkAnswer()
@@ -73,4 +75,18 @@ function checkAnswer() {
     })
 }
 
-loadLevel()
+async function copyClipboard() {
+    const button = document.getElementById("salin")
+    await navigator.clipboard.writeText(ct.innerText)
+    button.classList.replace("bg-blue-500", "bg-green-500")
+    setTimeout(() => button.classList.replace("bg-green-500", "bg-blue-500"), 700)
+}
+
+
+if((oldLevel + 1) == level || oldLevel == level) loadLevel()
+else{
+    alert("Jangan curang ya brokk")
+    localStorage.setItem("level", 1)
+    level = 1
+    loadLevel()
+}

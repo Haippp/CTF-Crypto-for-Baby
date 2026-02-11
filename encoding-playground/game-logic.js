@@ -3,7 +3,7 @@ const title = document.getElementById('title')
 const desc = document.getElementById('description')
 const ct = document.getElementById('ciphertext')
 const userInput = document.getElementById('answer')
-let oldLevel = level
+let oldLevel = localStorage.setItem('old', level.toString()) ? Number(localStorage.getItem('old')) : 1
 
 document.getElementById('answer').addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
@@ -29,6 +29,11 @@ async function sha256(text) {
 }
 
 function loadLevel(){
+    if (!((oldLevel + 1) == level || oldLevel == level)) {
+        alert("Masss mas, main tu yang jujur aja mas")
+        level = 1
+        localStorage.setItem("old", "1")
+    }
     if (level <= 5){
         getData(level).then(data => {
         title.innerText = data.title
@@ -82,11 +87,6 @@ async function copyClipboard() {
     setTimeout(() => button.classList.replace("bg-green-500", "bg-blue-500"), 700)
 }
 
-
-if((oldLevel + 1) == level || oldLevel == level) loadLevel()
-else{
-    alert("Jangan curang ya brokk")
-    localStorage.setItem("level", 1)
-    level = 1
-    loadLevel()
-}
+loadLevel()
+console.log("Level lama",oldLevel)
+console.log("Level baru", level)

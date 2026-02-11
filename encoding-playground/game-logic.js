@@ -12,7 +12,7 @@ document.getElementById('answer').addEventListener('keydown', function (e) {
 })
 
 function getData(lvl) {
-    return fetch('./content.json').then(res => res.json())
+    return fetch('/encoding-playground/content.json').then(res => res.json())
     .then(data => data[`${lvl}`]).catch(error => console.log(error))
 }
 

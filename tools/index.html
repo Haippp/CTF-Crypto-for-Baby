@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tools</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="min-h-screen flex justify-center items-center">
+    <div class="max-w-5xl w-full flex justify-center">
+        <div class="">
+            <h1 class="text-2xl font-bold text-center">This is the tools</h1>
+            <label for="input">Input</label><input type="text" id="input">
+            <br><button type="button" onclick="process()" class="bg-blue-500 p-2">process</button>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script>
+        const inputValue = document.getElementById("input")
+        const output = document.getElementById("output")
+
+        function process() {
+            console.log("button on click")
+            output.innerHTML = inputValue.value
+            console.log(inputValue.value)
+        }
+    </script>
+</body>
+</html>

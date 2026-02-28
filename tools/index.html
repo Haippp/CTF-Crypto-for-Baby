@@ -12,38 +12,11 @@
             <h1 class="text-2xl font-semibold p-5">List Fitur : </h1>
         </section>
         <section class="col-span-4 w-full min-h-screen flex justify-center items-center">
-            <div class="w-full grid grid-cols-2 gap-8 px-[2rem]">
-                <h1 class="text-3xl font-bold col-span-2">Jenis Encoding</h1>
-                <div>
-                    <label for="input">Input</label><br>
-                    <textarea type="text" id="text-input" class="w-full h-[200px] p-2 border border-slate-300 outline-blue-200 rounded-lg"></textarea>
-                </div>
-                <div>
-                    <label for="output">Output</label><br>
-                    <textarea type="text" id="output" class="w-full h-[200px] p-2 border border-slate-300 outline-blue-200 rounded-lg"></textarea>
-                </div>
-                <button type="button" onclick="process()" class="bg-blue-500 hover:bg-blue-600 p-2 cursor-pointer w-[200px] rounded-md" id="process">process</button>
+            <div class="w-full grid grid-cols-2 gap-8 px-[2rem]" id="tools-section">
             </div>
         </section>
     </div>
-    <script src="../asset/script/renderFeature.js"></script>
-    <script>
-        const text = document.getElementById("text-input")
-        const btn = document.getElementById("process")
-        const result = document.getElementById("output")
-        
-        text.addEventListener("input", ()=>{
-            let isEmpty = text.value.trim() === ''
-            console.log(isEmpty)
-            btn.disabled = isEmpty
-            btn.classList.toggle("bg-blue-500", !isEmpty)
-            btn.classList.toggle("hover:bg-blue-600", !isEmpty)
-            btn.classList.toggle("bg-slate-400", isEmpty)
-        })
-
-        function process() {
-            
-        }
-    </script>
+    <script src="renders.js"></script>
+    <script type="module" src="process.mjs" defer></script>
 </body>
 </html>

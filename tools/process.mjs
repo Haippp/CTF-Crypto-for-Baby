@@ -12,9 +12,11 @@ tools.addEventListener("input", (e) => {
         let isEmpty = text.value.trim() === ''
 
         btn.disabled = isEmpty
-        btn.classList.toggle("bg-blue-500", !isEmpty)
-        btn.classList.toggle("hover:bg-blue-600", !isEmpty)
-        btn.classList.toggle("bg-slate-400", isEmpty)
+        btn.classList.toggle("bg-emerald-700", !isEmpty)
+        btn.classList.toggle("hover:bg-emerald-800", !isEmpty)
+        btn.classList.toggle("cursor-pointer", !isEmpty)
+        btn.classList.toggle("bg-emerald-950", isEmpty)
+        btn.classList.toggle("cursor-not-alowed", isEmpty)
 
         const result = document.getElementById("output")
         if(isEmpty) result.value = ''

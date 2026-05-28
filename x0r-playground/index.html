@@ -1,2 +1,90 @@
-<h1>cooming soon</h1>
-<br><a href="./..">Kembali</a>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/asset/output.css" />
+    <title>x0r Playground</title>
+    <style>
+      .actives {
+        background-color: oklch(37.3% 0.034 259.733);
+      }
+    </style>
+  </head>
+  <body class="grid grid-cols-10 bg-slate-800">
+    <aside class="col-span-3 p-6 grid grid-cols-1 gap-2 bg-slate-700/20 min-h-screen">
+      <div class="flex flex-col gap-2">
+        <h1 class="text-2xl font-black text-white mb-3 border-b border-gray-600 pb-3">WhangsAPP</h1>
+        <input
+          type="text"
+          placeholder="Cari nama atau nomor.."
+          class="placeholder-gray-500 p-2 w-full text-white border border-gray-600 rounded-lg" />
+        <div class="border border-gray-600 rounded-lg p-3 flex items-center gap-5 actives">
+          <img
+            src="/asset/img/ceo-neotech.jpg"
+            alt="profile"
+            class="w-[50px] h-[50px] rounded-full" />
+          <div>
+            <h3 class="text-lg font-bold text-gray-50">Ceo NeoTech</h3>
+            <p class="text-gray-400 text-xs">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div> 
+          <div>
+            <p class="text-xs font-bold text-gray-400">2m</p>
+            <span class="bg-amber-600 px-2 rounded-full text-sm text-gray-200">1</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main class="col-span-7 relative">
+      <div class="flex w-full gap-5 bg-slate-900 pl-4 py-3 items-center">
+        <img
+          src="/asset/img/ceo-neotech.jpg"
+          alt="profile"
+          class="w-[70px] h-[70px] rounded-full" />
+        <div>
+          <h2 class="text-xl font-bold text-gray-50">Ceo NeoTech</h2>
+          <p class="text-gray-400">Online</p>
+        </div>
+      </div>
+      <!-- Chatting -->
+      <div class="grid grid-cols-1 p-8 gap-3 max-h-full overflow-auto">
+        <div
+          class="bg-slate-700 w-fit p-4 rounded-b-xl rounded-tr-xl justify-self-start h-fit">
+          <p class="text-white font-medium">Bro lagi dimana</p>
+          <span class="flex w-full text-xs text-gray-400 justify-end">19.99</span>
+        </div>
+        <div
+          class="bg-slate-700 w-fit p-4 rounded-b-xl rounded-tl-xl justify-self-end h-fit">
+          <p class="text-white font-medium">Di pal palan mas</p>
+          <span class="flex w-full text-xs text-gray-400 justify-end">19.99</span>
+        </div>
+        <div
+          class="bg-slate-700 w-fit max-w-[700px] p-4 rounded-b-xl rounded-tr-xl justify-self-start h-fit">
+          <p class="text-white font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nisi!</p>
+          <span class="flex w-full text-xs text-gray-400 justify-end">19.99</span>
+        </div>
+        <div
+          class="bg-slate-700 w-fit max-w-[700px] p-4 rounded-b-xl rounded-tl-xl justify-self-end h-fit">
+          <p class="text-white font-medium">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, vitae! Voluptatibus impedit iusto architecto soluta.</p>
+          <span class="flex w-full text-xs text-gray-400 justify-end">19.99</span>
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-2 w-full px-10 absolute bottom-3">
+        <input type="text" placeholder="Masukkan pesan..." class="bg-gray-300 rounded-full p-3 w-full"/>
+        <button class="bg-amber-600 p-2 rounded-full pr-3 pt-3">
+          <svg
+          class="fill-white"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24">
+            <path
+              d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z" />
+          </svg>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

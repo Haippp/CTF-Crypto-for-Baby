@@ -24,15 +24,15 @@
             src="/asset/img/ceo-neotech.jpg"
             alt="profile"
             class="w-[50px] h-[50px] rounded-full" />
-          <div class="max-w-max w-full">
+          <div class="w-full">
             <h3 class="text-lg font-bold text-gray-50">Ceo NeoTech</h3>
-            <p class="text-gray-400 text-xs" id="new-message">
+            <p class="text-gray-400 text-xs" id="new-message" maxlenght="15">
               new message
             </p>
           </div> 
           <div>
-            <p class="text-xs font-bold text-gray-400">2m</p>
-            <span class="bg-amber-600 px-2 rounded-full text-sm text-gray-200">1</span>
+            <p class="text-xs font-bold text-gray-400">now</p>
+            <div id="total-new-message"></div>
           </div>
         </div>
       </div>
@@ -49,27 +49,8 @@
         </div>
       </div>
       <!-- Chatting -->
-      <div class="grid grid-cols-1 p-8 gap-3 max-h-full overflow-auto">
-        <div
-          class="bg-slate-700 w-fit p-4 rounded-b-xl rounded-tr-xl justify-self-start h-fit">
-          <p class="text-white font-medium">Bro lagi dimana</p>
-          <span class="flex w-full text-xs text-gray-400 justify-end">19.99</span>
-        </div>
-        <div
-          class="bg-slate-700 w-fit p-4 rounded-b-xl rounded-tl-xl justify-self-end h-fit">
-          <p class="text-white font-medium">Di pal palan mas</p>
-          <span class="flex w-full text-xs text-gray-400 justify-end">19.99</span>
-        </div>
-        <div
-          class="bg-slate-700 w-fit max-w-[700px] p-4 rounded-b-xl rounded-tr-xl justify-self-start h-fit">
-          <p class="text-white font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nisi!</p>
-          <span class="flex w-full text-xs text-gray-400 justify-end">19.99</span>
-        </div>
-        <div
-          class="bg-slate-700 w-fit max-w-[700px] p-4 rounded-b-xl rounded-tl-xl justify-self-end h-fit">
-          <p class="text-white font-medium">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, vitae! Voluptatibus impedit iusto architecto soluta.</p>
-          <span class="flex w-full text-xs text-gray-400 justify-end">19.99</span>
-        </div>
+      <div class="grid grid-cols-1 p-8 gap-3 max-h-full overflow-auto" id="chatting">
+
       </div>
       <div class="flex justify-center items-center gap-2 w-full px-10 absolute bottom-3">
         <input type="text" placeholder="Masukkan pesan..." class="bg-gray-300 rounded-full p-3 w-full"/>
@@ -86,5 +67,6 @@
         </button>
       </div>
     </main>
+    <script src="/asset/script/chatting.js"></script>
   </body>
 </html>

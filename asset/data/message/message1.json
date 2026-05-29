@@ -7,11 +7,11 @@
   {
     "sender": "ceo-neotech",
     "message": "Pesannya katanya di enrkipsi bisa tolong dekripsikan ga? katanya keynya itu \"secret123\"",
-    "delay": 3000
+    "delay": 2000
   },
   {
     "sender": "ceo-neotech",
-    "message": "nih pesannya: \nAsoy",
-    "delay": 2000
+    "message": "nih pesannya: \n340a171a061510126016171517171844127f1608021a4516505c54161143100915481c1338040f1310545d4713110c101345105459411a15101b45045441521d4504070454425347060b1a1345134453131804101b0d545d471318100d110c544257410500111c1c15",
+    "delay": 4000
   }
 ]
